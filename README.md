@@ -10,7 +10,6 @@
 8. El cliente y el servidor debe entregarlos en un proyecto estructurado con Maven.
 9. El cliente debe traer "quemada" en el código fuente la url de su aplicación desplegada en Heroku.
 
-
 ## Pre-requisitos
 * [MAVEN](https://maven.apache.org/) - Administrador de dependencias.
 * [GIT](https://git-scm.com/) - Control de versiones.

@@ -28,8 +28,8 @@ public class App
             res.type("application/json");
             List<Double> elementos = new ArrayList<Double>();
             String[] data = req.body().split(",");
-            for (String datum : data) {
-                elementos.add(Double.parseDouble(datum));
+            for (String a : data) {
+                elementos.add(Double.parseDouble(a));
             }
             Control control = new Control(elementos);
 

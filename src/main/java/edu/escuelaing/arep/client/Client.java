@@ -9,7 +9,7 @@ import java.net.URL;
 
 public class Client {
     public static void main(String[] args) throws IOException{
-        URL url = new URL("https://arepparcial1.herokuapp.com/");
+        URL url = new URL("https://arepparcial1.herokuapp.com/solucion");
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
         connection.setRequestMethod("POST");
         connection.setDoOutput(true);

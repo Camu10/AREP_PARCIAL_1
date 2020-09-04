@@ -22,6 +22,21 @@ public class App
         port(getPort());
         get("/", (req, res) -> inputDataPage(req, res));
         get("/results", (req, res) -> resultsPage(req, res));
+        post("/solucion",(req, res) -> {
+
+            res.status(200);
+            res.type("application/json");
+            List<Double> elementos = new ArrayList<Double>();
+            String[] data = req.body().split(",");
+            for (String datum : data) {
+                elementos.add(Double.parseDouble(datum));
+            }
+            Control control = new Control(elementos);
+
+            List<Double> ord = control.bubbleSort();
+            double sum = control.sumatoria(),mean = control.mean();
+            return JsonConstructor.toJson(ord,sum,mean);
+        });
     }
 
     /**
@@ -72,7 +87,6 @@ public class App
 
         List<Double> ord = control.bubbleSort();
         double sum = control.sumatoria(),mean = control.mean();
-
         return JsonConstructor.toJson(ord,sum,mean);
     }
 
